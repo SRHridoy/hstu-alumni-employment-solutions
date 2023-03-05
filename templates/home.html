@@ -1,47 +1,83 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>HSTU Alumni Empoyment Solutions </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <style>
-      #banner{
-        height: 360px;
-        object-fit:cover;
-        width: 100%;
-        margin-bottom:16px;
-      }
+        #banner {
+            height: 360px;
+            object-fit: cover;
+            width: 100%;
+            margin-bottom: 16px;
+        }
+
+        .glow {
+            font-size: auto;
+            color: #ffffff;
+            text-align: center;
+            -webkit-animation: glow 1s ease-in-out infinite alternate;
+            -moz-animation: glow 1s ease-in-out infinite alternate;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+
+        @-webkit-keyframes glow {
+            from {
+                text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000,
+                    0 0 50px #9554b3, 0 0 60px #9554b3, 0 0 70px #9554b3;
+            }
+
+            to {
+                text-shadow: 0 0 20px #eeeeee, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6,
+                    0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+            }
+        }
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     {% include 'nav.html' %}
-    <img class = "img-fluid" id = "banner" src = "https://hstu-alumni-employment-solutions.md-sohanur-rahm.repl.co/static/banner.jpg" height="320">
-    <div class = "container">
-      <h1 class = "text-center mt-2 mb-4">HSTU Alumni Emplyment Solutions</h1>
-    <div class = "row" style="margin-bottom:16px">
-      <div class = "col-6">
-      <p class = "lead">Welcome to the HSTU Alumni Job Solution website! We are a platform dedicated to connecting the alumni of HSTU with the next generation of professionals. Our goal is to help our alumni stay connected and give back to the university community while also providing valuable opportunities to our current students.
-  
-  Our website offers a job board where alumni can post job openings in their companies or organizations. These job openings are exclusively for HSTU students and graduates, ensuring that our community has access to quality opportunities that match their skills and interests.
-  
-  We also provide career resources to our alumni and students. Our career services team offers job search tips, career advice, and networking opportunities to help our users achieve their career goals. We believe that every HSTU alumnus and student deserves the chance to pursue a fulfilling career, and we are committed to making that a reality.
-  
-  Our website is run by a team of dedicated alumni who are passionate about supporting the HSTU community. We are always looking for ways to improve our services and make a positive impact on the lives of our users. If you have any questions, comments, or suggestions, please don't hesitate to reach out to us. Thank you for visiting HSTU Alumni Job Solution!</p>
-      </div>
-      <div class = "col-6">
-      <img class ="img-fluid" src="/static/emp.jpg" style ="height:520px;margin-top:16px; object-fit:cover;" >
-    </div>
-      <h2 class = "text-center mt-2 mb-4">Job Openings</h2>
-      <p >
-        {%for job in jobs%}
-          {% include 'jobitem.html' %}
-        {% endfor %}
-      </p>
-      <div class="text-center">
-        <a class="btn btn-primary btn-lg" href="mailto:hstuAlumniEmpSol@gmail.com?subject=Question%20about%20Job%20Openings&body=My%20name%20%3A%20%3C%20Your%20name%20here%20%3E%0AMy%20Question%20%3A%20%3C%20Your%20question%20here%20%3E">Contact Us</a>
-      </div>
-    </div>
-    {% include 'footer.html' %}
-  </body>
+    <img class="img-fluid" id="banner"
+        src="https://hstu-alumni-employment-solutions.md-sohanur-rahm.repl.co/static/banner.jpg" height="320">
+    <div class="container">
+        <h1 class="text-center mt-2 mb-4 glow" font-size = 50px >HSTU Alumni Emplyment Solutions</h1>
+        <div class="row" style="margin-bottom:16px">
+            <div class="col-6">
+                <p align="justify" class="lead">Welcome to the HSTU Alumni Job Solution website! We are a platform
+                    dedicated to connecting the alumni of HSTU with the next generation of professionals. Our goal is to
+                    help our alumni stay connected and give back to the university community while also providing
+                    valuable opportunities to our current students.Our website offers a job board where alumni can post
+                    job openings in their companies or organizations. These job openings are exclusively for HSTU
+                    students and graduates, ensuring that our community has access to quality opportunities that match
+                    their skills and interests.We also provide career resources to our alumni and students. Our career
+                    services team offers job search tips, career advice, and networking opportunities to help our users
+                    achieve their career goals. We believe that every HSTU alumnus and student deserves the chance to
+                    pursue a fulfilling career, and we are committed to making that a reality.Our website is run by a
+                    team of dedicated alumni who are passionate about supporting the HSTU community. We are always
+                    looking for ways to improve our services and make a positive impact on the lives of our users. If
+                    you have any questions, comments, or suggestions, please don't hesitate to reach out to us. Thank
+                    you for visiting HSTU Alumni Job Solution!</p>
+            </div>
+            <div class="col-6">
+                <img class="img-fluid" src="/static/emp.jpg" style="height:520px;margin-top:16px; object-fit:cover;">
+            </div>
+            <h2 class="text-center mt-2 mb-4 glow">Job Openings</h2>
+            <p>
+                {%for job in jobs%}
+                {% include 'jobitem.html' %}
+                {% endfor %}
+            </p>
+            <div class="text-center">
+                <a class="btn btn-primary btn-lg"
+                    href="mailto:hstuAlumniEmpSol@gmail.com?subject=Question%20about%20Job%20Openings&body=My%20name%20%3A%20%3C%20Your%20name%20here%20%3E%0AMy%20Question%20%3A%20%3C%20Your%20question%20here%20%3E">Contact
+                    Us</a>
+            </div>
+        </div>
+        {% include 'footer.html' %}
+</body>
+
 </html>
