@@ -1,0 +1,41 @@
+<div class="border-bottom row" style="margin-bottom:16px; padding-bottom:4px">
+<h4 class="text-center glow">Application Form Here!</h4>
+<form action = "/job/{{job['id']}}/apply" method = "post">
+  <div class="mb-3 form-control form-control-lg">
+    <label>Enter Your Full Name : </label><br>
+    <input type = "text" class="form-control" name = "full_name" placeholder="first name last name">
+  </div>
+
+  <div class="mb-3 form-control form-control-lg">
+    <label>Enter Your Email Addresss : </label><br>
+    <input type = "email" class="form-control" name = "email" placeholder="name@example.com">
+  </div>
+
+  <div class="mb-3 form-control form-control-lg">
+    <label>Enter Your LinkedIn URL : </label><br>
+   <input type = "text" class="form-control" name = "linkedin_url" placeholder = "https://linked.com/in/user-name">
+  </div>
+  
+  <div class="mb-3 ">
+    <label><b>Eduacational Experiences : </b></label><br>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name = 
+      "education"></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label><b>Working Experience : </b></label><br>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name = "work_experience"></textarea>
+  </div>
+
+  <div class="mb-3 form-control form-control-lg">
+    <label>Enter Your Resume URL : </label><br>
+   <input type = "text" class="form-control" name = "resume_url">
+  </div>
+
+  <div class="mb-3">
+    <input class="btn btn-primary btn-lg text-center" type="submit" value="Submit">
+  </div>
+</div>
+    
+    
+</form>
