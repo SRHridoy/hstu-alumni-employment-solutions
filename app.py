@@ -1,6 +1,6 @@
 from flask import Flask, render_template, jsonify, request
 from database import load_jobs_from_db,load_job_from_db,add_application_to_db
-
+#কাল থেকে ইনশাআল্লাহ 
 app = Flask(__name__)
 #123
 @app.route("/")
