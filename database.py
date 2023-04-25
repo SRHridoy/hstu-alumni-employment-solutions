@@ -8,7 +8,7 @@ engine = create_engine(db_connection_string, connect_args={
     "ssl_ca": "/etc/ssl/cert.pem"
   }
 })
-#last masti
+#last masti....please forgive me
 
 def load_jobs_from_db():
   with engine.connect() as conn:
