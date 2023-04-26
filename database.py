@@ -2,7 +2,7 @@ from sqlalchemy import create_engine, text
 import os
 #.....data
 db_connection_string = os.environ['DB_CONNECTION_STRING']
-#কালকে ঈদ
+
 engine = create_engine(db_connection_string, connect_args={
   "ssl": {
     "ssl_ca": "/etc/ssl/cert.pem"
