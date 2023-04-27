@@ -2,7 +2,7 @@ from flask import Flask, render_template, jsonify, request
 from database import load_jobs_from_db,load_job_from_db,add_application_to_db
 #কাল থেকে ইনশাআল্লাহ 
 app = Flask(__name__)
-#123
+
 @app.route("/")
 def hello_HAES():
   jobs_list = load_jobs_from_db()
@@ -11,7 +11,7 @@ def hello_HAES():
 @app.route("/api/jobs")
 def list_jobs():
   return jsonify(jobs)
-#ঈদ আজকে
+
 @app.route("/job/<id>")
 def show_job(id):
   job = load_job_from_db(id)
